@@ -20,7 +20,7 @@ const useWeather = () => {
         message: ""
     });
 
-    const [error, setError] = useState(null)
+    const [error, setError] = useState(null);
 };
 
 export default useWeather;
