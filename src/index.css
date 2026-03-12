@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* Theme Customization */
+@theme {
+  --color-body: #1D1E28;
+  --color-light: #ffffff;
+}
+
+/* Container customization */
+@utility container {
+  margin-inline: auto;      /* center */
+  padding-inline: 1.25rem;  /* padding */
+}
