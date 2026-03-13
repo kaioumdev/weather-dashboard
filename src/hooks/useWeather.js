@@ -30,19 +30,21 @@ const useWeather = () => {
                 message: "fetching weater data"
             });
 
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${import.meta.env.VITE_WEATHER_API}&units=metric`);
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${import.meta.env.VITE_WEATHER_API_KEY}&units=metric`);
+            console.log("response", response)
             if(!response.ok){
                 const errorMessage = `featching weather data failed ${response.status}`;
                 throw new Error(errorMessage);
             };
 
             const data = await response.json();
+            console.log("data", data)
             const updateWeatherData = {
                 ...weatherData,
                 location: data?.name,
                 climate: data?.weather[0]?.main,
                 temperature: data?.main?.temp,
-                maxTemperature: data?main?.temp_max,
+                maxTemperature: data?.main?.temp_max,
                 minTemperature: data?.main?.temp_min,
                 humidity: data?.main?.humidity,
                 cloudPercentage: data?.clouds?.all,
@@ -62,9 +64,9 @@ const useWeather = () => {
                 message: ""
             })
         }
+    }
 
-
-        useEffect(() => {
+    useEffect(() => {
             setLoading({
                 state: true,
                 message: "Finding location"
@@ -79,7 +81,6 @@ const useWeather = () => {
             loading,
             error
         }
-    }
 };
 
 export default useWeather;
