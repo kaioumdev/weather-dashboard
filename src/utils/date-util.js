@@ -2,7 +2,7 @@ function getFormattedDate(value, type, isMS){
     if(!type) return value;
 
     if(!isMS){
-        return value = value * 1000;
+         value = value * 1000;
     };
 
     const date = new Date(value);
