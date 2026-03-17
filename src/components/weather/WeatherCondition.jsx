@@ -11,7 +11,7 @@ const WeatherCondition = () => {
     return (
          <div>
             <p className="text-sm lg:text-lg font-bold uppercase mb-8">
-              thunderstorm with light drizzle
+              The climate is {climate}
             </p>
             <ul className="space-y-6 lg:space-y-6">
               <li className="text-sm lg:text-lg flex items-center justify-between space-x-4">

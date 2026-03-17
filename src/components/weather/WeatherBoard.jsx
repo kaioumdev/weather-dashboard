@@ -3,12 +3,7 @@ import AddToFavourite from "./AddToFavourite";
 import WeatherCondition from "./WeatherCondition";
 import WeatherHeadline from "./WeatherHeadline";
 import { WeatherContext } from "../../context";
-import CloudIcon from "../../assets/cloud.svg";
-import HazeIcon from "../../assets/haze.svg";
-import SnowIcon from "../../assets/icons/snow.svg";
-import SunnyIcon from "../../assets/icons/sunny.svg";
-import RainIcon from "../../assets/rainy.svg";
-import ThunderIcon from "../../assets/thunder.svg";
+
 
 const WeatherBoard = () => {
   const { loading, weatherData } = useContext(WeatherContext);
