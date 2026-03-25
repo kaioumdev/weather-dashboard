@@ -12,6 +12,12 @@ const Search = () => {
     const fetchedLocation = getLocationByName(searchTerm);
     console.log(fetchedLocation);
     setSelectedLocation({...fetchedLocation})
+  };
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+    
   }
   return (
     <form action="#" onSubmit={handleSubmit}>
@@ -20,7 +26,7 @@ const Search = () => {
           className="bg-transparent  placeholder:text-white text-white w-full text-xs md:text-base outline-none border-none"
           type="search"
           placeholder="Search Location"
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={handleChange}
           required
         />
         <button type="submit">
