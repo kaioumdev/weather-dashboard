@@ -12,10 +12,10 @@ function AddToFavourite() {
 
     const { latitude, longitude, location } = weatherData;
 
-    // useEffect(() => {
-    //     const found = favourites.find((fav) => fav.location === location);
-    //     toggleFavourite(found);
-    // }, []);
+    useEffect(() => {
+        const found = favourites.find((fav) => fav.location === location);
+        toggleFavourite(found);
+    }, []);
 
     function handleFavourites() {
         const found = favourites.find((fav) => fav.location === location);
